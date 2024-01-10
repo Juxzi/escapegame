@@ -35,7 +35,7 @@ html, body {
     z-index: 3;
     font-family: "UnifrakturMaguntia";
     color: #fff;
-    font-size: 8rem;
+    font-size: 10vw;
     text-shadow: black 1px 1px 20px;
     -webkit-text-stroke: #8a8a8a 0.5px ;
 }

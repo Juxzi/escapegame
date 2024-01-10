@@ -74,7 +74,7 @@ $("#verifierReponse6").click(function() {
 // Vérification pour l'Énigme 7
 $("#verifierReponse7").click(function() {
     var reponse = $("#reponseEnigme7").val().toLowerCase();
-    if (reponse === "r6xv6zu") {
+    if (reponse === "r6xvgzu") {
         $("#feedback7").text("Bonne réponse!");
         gsap.to("#enigme7", {y: -window.innerHeight, duration: 1, autoAlpha: 0});
         gsap.fromTo("#fin", {y: window.innerHeight, autoAlpha: 0}, {y: 0, autoAlpha: 1, duration: 1});

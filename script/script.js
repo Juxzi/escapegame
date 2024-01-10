@@ -71,7 +71,17 @@ $("#verifierReponse6").click(function() {
         $("#feedback6").text("Mauvaise réponse. Pensez à ce qui peut être plus précieux que l'or et les pierres précieuses.");
     }
 });
-
+// Vérification pour l'Énigme 7
+$("#verifierReponse7").click(function() {
+    var reponse = $("#reponseEnigme7").val().toLowerCase();
+    if (reponse === "r6xv6zu") {
+        $("#feedback7").text("Bonne réponse!");
+        gsap.to("#enigme7", {y: -window.innerHeight, duration: 1, autoAlpha: 0});
+        gsap.fromTo("#fin", {y: window.innerHeight, autoAlpha: 0}, {y: 0, autoAlpha: 1, duration: 1});
+    } else {
+        $("#feedback7").text("Mauvaise réponse. recommence");
+    }
+});
 // Continuez avec d'autres gestionnaires d'événements pour les énigmes supplémentaires
 
 });

@@ -78,10 +78,25 @@ $("#verifierReponse7").click(function() {
         $("#feedback7").text("Bonne réponse!");
         gsap.to("#enigme7", {y: -window.innerHeight, duration: 1, autoAlpha: 0});
         gsap.fromTo("#fin", {y: window.innerHeight, autoAlpha: 0}, {y: 0, autoAlpha: 1, duration: 1});
+       // Animation GSAP pour le défilement de texte
+       gsap.to("#finalMessage", {
+        duration: 120,
+        ease: "none",
+        y: -($("#finalMessage").height() + 200), // Assurez-vous que tout le texte défile
+        delay: 1
+    });
+
+    // Animation GSAP pour faire apparaître les phrases progressivement
+    $(".story").each(function(index) {
+        gsap.fromTo(this, 
+            { y: 20, autoAlpha: 0 },
+            { duration: 1, y: 0, autoAlpha: 1, delay: 1 + index * 7 }
+        );
+    });
     } else {
         $("#feedback7").text("Mauvaise réponse. recommence");
     }
 });
-// Continuez avec d'autres gestionnaires d'événements pour les énigmes supplémentaires
+
 
 });
